@@ -9,5 +9,20 @@
  * @param size
  */
 export const chunk = (arr, size) => {
-    //TODO
+    if (!Array.isArray(arr)) {
+        return [];
+    }
+
+    if (!Number.isInteger(size) || size < 1) {
+        return [];
+    }
+
+    const result = [];
+    let position = 0;
+    while (position < arr.length) {
+        result.push(arr.slice(position, position + size));
+        position += size;
+    }
+
+    return result;
 };
