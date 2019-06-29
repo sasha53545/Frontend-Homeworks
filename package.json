@@ -1,0 +1,25 @@
+{
+  "name": "frontend-homeworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obabichev/Frontend-Homeworks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/obabichev/Frontend-Homeworks/issues"
+  },
+  "homepage": "https://github.com/obabichev/Frontend-Homeworks#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "jest": "^24.8.0"
+  }
+}
