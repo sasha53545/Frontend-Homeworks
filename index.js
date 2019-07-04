@@ -4,3 +4,4 @@
  * Just run in the console "npm start"
  *
  */
+console.log("Hello World");

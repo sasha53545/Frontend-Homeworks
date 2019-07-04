@@ -10,4 +10,7 @@
  */
 export const get = (arr, index) => {
     //TODO
+    console.log(arr);
+    console.log(index);
+    return arr[index];
 };
