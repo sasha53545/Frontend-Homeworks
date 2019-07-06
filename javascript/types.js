@@ -162,7 +162,6 @@ export function justPositive(arr) {
  * @param users
  */
 export function getNames(users) {
-    return users.map(u => u.name);
 }
 
 /**
