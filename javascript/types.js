@@ -173,15 +173,15 @@ export function maxElement(arr) {
  *
  * @param arr
  */
-export function justPositive(arr) {    
-    var obj = [];
-    var boolean = true;
+export function justPositive(arr) {   
+    var arr2 = [];
+
     for(var i = 0; i < arr.length; i++) {
-        if((arr[i] >= 0)) {
-            obj.push(arr[i]);
+        if(arr[i] >= 0 && arr[i] != null) {
+            arr2.push(arr[i]);
         }
     }
-    return obj;
+    return arr2;
 }
 
 /**
@@ -218,5 +218,8 @@ export function getNames(users) {
  * @param arr
  */
 export function elementsSum(arr) {
-    
+    var result = arr.reduce(function(sum, current) {
+        return sum + current
+    });
+    return result;
 }
