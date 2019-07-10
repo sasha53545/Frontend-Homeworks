@@ -103,11 +103,7 @@ export function addFieldToObject(obj, key, value) {
  * smth like (arg1, arg2) => arg1 + arg2
  */
 export function createSumFunction() {
-    var value1, value2
-    function sum(value1, value2) {
-        return value1 + value2;
-    }
-    return sum(value1, value2);
+    return (arg1,arg2) => arg1 + arg2
 }
 
 /**
@@ -120,7 +116,7 @@ export function createSumFunction() {
  * @param value
  */
 export function createAddFunction(value) {
-
+    return (arg1) => arg1 + value
 }
 
 /**
@@ -135,6 +131,7 @@ export function createAddFunction(value) {
  * @param arg2
  */
 export function createArray(arg1, arg2) {
+    return [arg1,arg2]
 }
 
 /**
@@ -160,7 +157,13 @@ export function createArray(arg1, arg2) {
  * @param arr
  */
 export function maxElement(arr) {
-
+    var max = arr[0];
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
 }
 
 /**
@@ -170,8 +173,15 @@ export function maxElement(arr) {
  *
  * @param arr
  */
-export function justPositive(arr) {
-
+export function justPositive(arr) {    
+    var obj = [];
+    var boolean = true;
+    for(var i = 0; i < arr.length; i++) {
+        if((arr[i] >= 0)) {
+            obj.push(arr[i]);
+        }
+    }
+    return obj;
 }
 
 /**
@@ -191,6 +201,13 @@ export function justPositive(arr) {
  * @param users
  */
 export function getNames(users) {
+    var arr = []
+    for(var i = 0; i < users.length; i++) {
+        users[i].forEach(element => {
+            arr[i] = element.key(name);
+        });
+    } 
+    return arr;
 }
 
 /**
@@ -201,4 +218,5 @@ export function getNames(users) {
  * @param arr
  */
 export function elementsSum(arr) {
+    
 }
