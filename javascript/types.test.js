@@ -122,8 +122,8 @@ describe('justPositive', () => {
     });
 
     it('test 2', () => {
-        expect(justPositive(["hallo", null, undefined, true, 5, [], {}]))
-            .toEqual([5]);
+        expect(justPositive(["hallo", null, undefined, true, 5, 5.5, [], {}]))
+            .toEqual([5, 5.5]);
     });
 });
 
