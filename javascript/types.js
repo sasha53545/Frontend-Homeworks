@@ -177,10 +177,11 @@ export function justPositive(arr) {
     var arr2 = [];
 
     for(var i = 0; i < arr.length; i++) {
-        if(arr[i] >= 0 && arr[i] != null) {
+        if(arr[i] >= 0 && Number.isInteger(arr[i])) {
             arr2.push(arr[i]);
         }
     }
+    console.log(arr2);
     return arr2;
 }
 
@@ -202,11 +203,9 @@ export function justPositive(arr) {
  */
 export function getNames(users) {
     var arr = []
-    for(var i = 0; i < users.length; i++) {
-        users[i].forEach(element => {
-            arr[i] = element.key(name);
-        });
-    } 
+    users.forEach(element => {
+        arr.push(element.name);
+    });
     return arr;
 }
 

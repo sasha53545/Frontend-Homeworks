@@ -7,4 +7,11 @@
  */
 export const flatten = (arr) => {
     //TODO
-};
+    var emptyArray = [];
+    var obj = {};
+    if(Array.isArray(arr) == false) {
+        return emptyArray;
+    } else {
+        return arr.flat(1);
+    }
+}

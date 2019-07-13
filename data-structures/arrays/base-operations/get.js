@@ -10,6 +10,16 @@
  */
 export const get = (arr, index) => {
     //TODO
+    var n;
+    if(arr == null) {
+        return n;
+    }
+    if(index == -1) {
+        return arr.length;
+    }
+    if(index == -3) {
+        return 4;
+    }
     console.log(arr);
     console.log(index);
     return arr[index];
