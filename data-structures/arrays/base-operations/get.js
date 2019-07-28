@@ -13,14 +13,14 @@ export const get = (arr, index) => {
     var n;
     if(arr == null) {
         return n;
-    }
-    if(index == -1) {
-        return arr.length;
-    }
-    if(index == -3) {
-        return 4;
-    }
-    console.log(arr);
-    console.log(index);
+    } 
+    if(index < 0) { // как-то так
+        var max = arr.length + index;
+        for (var i = 0; i <= max; i + index) {
+            console.log(index);
+            return arr[max];
+        }
+    } else {
     return arr[index];
+    }
 };
