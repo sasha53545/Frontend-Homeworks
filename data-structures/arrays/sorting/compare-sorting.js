@@ -3,7 +3,7 @@ import {quickSort} from './quickSort';
 import {mergeSort} from './mergeSort';
 import {printTable} from '../../../utils/printTable';
 
-const ONE_TEST_SECONDS_LIMIT = 10;
+const ONE_TEST_SECONDS_LIMIT = 5;
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -45,7 +45,7 @@ function testSortingFunction(array, sortingFunction) {
     let iterations = 0;
     let totalTime = 0;
 
-    while (totalTime < ONE_TEST_SECONDS_LIMIT) {
+    while (totalTime < ONE_TEST_SECONDS_LIMIT * 1000) {
         const arrCopy = [...array];
 
         const hrstart = process.hrtime();
