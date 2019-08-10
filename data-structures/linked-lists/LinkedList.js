@@ -10,15 +10,38 @@ export class LinkedList {
         this.root = root;
     }
 
+    /**
+     * This method should return number of elements in the list
+     * @return {number}
+     */
     length() {
-
+      return 0;
     }
 
+    /**
+     * This method should add new Node with data 'data' in the end of the list
+     * @param data
+     */
     push(data) {
+    }
+
+    /**
+     * This method should add node with data 'data' in the position 'index'.
+     *
+     * If in the list less than index - 1 elements, new node should not be added
+     *
+     * @param index
+     * @param data
+     */
+    insert(index, data) {
 
     }
 
-    insert(index, data) {
+    /**
+     * this method should remove element with index 'index'
+     * @param index
+     */
+    remove(index) {
 
     }
 
@@ -41,4 +64,5 @@ export class LinkedList {
             .join(' -> ');
     }
 }
+
 
