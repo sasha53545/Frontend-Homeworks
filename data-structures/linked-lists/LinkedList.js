@@ -46,6 +46,22 @@ export class LinkedList {
     }
 
     /**
+     * This method should add another list in the end of the current
+     *
+     * @param list {LinkedList}
+     */
+    join(list) {
+    }
+
+    /**
+     * Should return true if one of nodes has next link to the one of previous nodes
+     *
+     * (you can use fast/slow iterators pattern)
+     */
+    isCycled() {
+    }
+
+    /**
      * This method is used for tests, but you can use it for your testing
      *
      * This method returns list as string like '4 -> 3 -> 2 -> 1 -> 0', Where 4 is the data of the root element
