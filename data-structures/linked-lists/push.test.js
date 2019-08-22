@@ -20,7 +20,7 @@ describe('[LinkedList] push', () => {
 
         expect(list.root.next.data).toEqual('one-more-item');
     });
-
+    
     it('test 3', () => {
         const list = new LinkedList();
 

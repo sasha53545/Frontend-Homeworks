@@ -40,7 +40,7 @@ function sort(arr, start, end) {
     j++;
 
     tmp = arr[end - 1];
-    arr[end -1] = arr[j];
+    arr[end - 1] = arr[j];
     arr[j] = tmp;
 
     sort(arr, start, j);
