@@ -1,4 +1,5 @@
-import {LLNode} from './LLNode';
+import { LLNode } from './LLNode';
+import { thisExpression, nullLiteral } from '@babel/types';
 
 export class LinkedList {
     /**
@@ -36,7 +37,7 @@ export class LinkedList {
     push(data) {
         const node = new LLNode(data);
         let currentNode = this.root;
-        if(!currentNode) {
+        if (!currentNode) {
             this.root = node;
             return node;
         }
@@ -58,7 +59,34 @@ export class LinkedList {
      * @param data
      */
     insert(index, data) {
+        console.log('this', this);
+        console.log('this.root', this.root);
+        const node = new LLNode(data);
+        if (index === 0) {
+            node.next = this.root;
+            this.root = node;
+            return this.root;
+        }
 
+        let target = findNodeByIndex(index - 1, this.root);
+        console.log('t', target);
+        if (!target) {
+            return;
+        }
+        node.next = target.next;
+        target.next = node;
+
+        function findNodeByIndex(index, n) {
+            let current = n;
+            for (let i = 0; i < index; i++) {
+                if (current.next === null) {
+                    return 0;
+                }
+                current = current.next;
+            }
+            return current;
+        }
+        return this.root;
     }
 
     /**
@@ -66,7 +94,32 @@ export class LinkedList {
      * @param index
      */
     remove(index) {
+        if (!this.root) {
+            return;
+        }
+        if (index === 0) {
+            this.root = this.root.next;
+            return;
+        }
+        let target = findNodeByIndex(index - 1, this.root);
+        let target2 = findNodeByIndex(index + 1, this.root);
 
+        if (!target) {
+            return;
+        }
+
+        target.next = target2;
+
+        function findNodeByIndex(index, n) {
+            let current = n;
+            for (let i = 0; i < index; i++) {
+                if (current.next === null) {
+                    return null;
+                }
+                current = current.next;
+            }
+            return current;
+        }
     }
 
     /**
@@ -75,6 +128,19 @@ export class LinkedList {
      * @param list {LinkedList}
      */
     join(list) {
+        let current2 = list.root;
+        if (!this.root) {
+            this.root = current2;
+        } else {
+            let current = this.root;
+            while (current.next) {
+                current = current.next;
+            }
+            if (!current.next) {
+                current.next = current2;
+            }
+        }
+ 
     }
 
     /**
@@ -83,6 +149,21 @@ export class LinkedList {
      * (you can use fast/slow iterators pattern)
      */
     isCycled() {
+        if (!this.root) {
+            return false;
+        }
+        let current1 = this.root;
+        let current2 = this.root.next;
+        console.log(current1);
+        console.log(current2);
+        while (current1 || current2) {
+            current1 = current1.next;
+            current2 = current2.next.next;
+            if (current1 === current2) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -104,5 +185,3 @@ export class LinkedList {
             .join(' -> ');
     }
 }
-
-

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d dist --source-maps",
     "test": "jest",
     "start": "babel-node index.js",
     "compare-sorting": "babel-node data-structures/arrays/sorting/compare-sorting.js"

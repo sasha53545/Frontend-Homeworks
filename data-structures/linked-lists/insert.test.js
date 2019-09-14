@@ -82,7 +82,6 @@ describe('[LinkedList] insert', () => {
 
     });
 
-
     it('test 5', () => {
 
         let root = null;

@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/app.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/HackerRank/Interview_Preparation_Kit/Linked_Lists/Inserting_a_Node_Into_a_Sorted_Doubly_Linked_List/Inserting_a_Node_Into_a_Sorted_Doubly_Linked_List.js"
+        }
+    ]
+}

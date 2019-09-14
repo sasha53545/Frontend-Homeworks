@@ -4,10 +4,6 @@
  * Just run in the console "npm start"
  *
  */
-<<<<<<< HEAD
-console.log("Hello World");
-=======
-
 
 function mergeSort(arr) {
     console.log('[obabichev] =========mergeSort========', arr);
@@ -71,4 +67,3 @@ console.log('[obabichev] mergeSort', mergeSort([1, 7, 5, 10, 9, 3, 2, 4, 77]));
 // false true - true
 // true false = true
 // true true = true
->>>>>>> upstream/master
